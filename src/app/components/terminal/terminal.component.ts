@@ -12,6 +12,7 @@ export class TerminalComponent {
 
   @ViewChild('resizer') resizer!: ElementRef;
   @ViewChild('terminal') terminal!: ElementRef;
+  
 
   hiddenTerminal() {
     this.isHidden = !this.isHidden;

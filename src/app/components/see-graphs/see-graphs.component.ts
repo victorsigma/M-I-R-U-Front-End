@@ -271,7 +271,7 @@ export class SeeGraphsComponent implements OnInit {
 
       pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
       pdf.save('chart.pdf');
-    }).catch(error => {
+    }).catch((error: any) => {
       console.error('Error generating PDF:', error);
     });
   }

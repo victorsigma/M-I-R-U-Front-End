@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiKey: 'http://localhost:8000/'
+  apiKey: 'https://back-end-machin-learning.onrender.com/'
 };
 
 /*

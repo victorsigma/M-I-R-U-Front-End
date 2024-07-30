@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { ModelsService } from 'src/app/services/models.service';
 import { TerminalService } from 'src/app/services/terminal.service';
@@ -27,6 +27,7 @@ export class SlideMainComponent {
   public showPanel: boolean = false;
 
 
+  @ViewChild('terminal') terminal!: any;
   constructor(private breakpointObserver: BreakpointObserver, private modelService: ModelsService, 
     private terminalService: TerminalService, private textFormattingService: TextFormattingService,
     private router: Router) {
@@ -41,7 +42,12 @@ export class SlideMainComponent {
     this.terminalMessage = this.textFormattingService.formatText(this.terminalMessageOriginal);
     this.terminalService.eventEmitter.subscribe(event => {
       // Inserta el nuevo mensaje al principio de terminalMessage
-      this.terminalMessageOriginal = `${event}\n${this.terminalMessageOriginal}`
+      
+      
+      if(this.terminal.isHidden) {
+        document.getElementById('terminalHidden')?.click();
+      }
+      this.terminalMessageOriginal = `${event}\n\n${this.terminalMessageOriginal}`
       this.terminalMessage = this.textFormattingService.formatText(this.terminalMessageOriginal);
     });
 

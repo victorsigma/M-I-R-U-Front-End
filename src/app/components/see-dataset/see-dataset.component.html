@@ -5,7 +5,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i style="color: var(--text-color);" class="fa-solid fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -31,20 +31,20 @@
                     </li>
 
                     <li class="nav-item" [class.full-item]="!isMobile">
-                        <button class="btn btn-update-ghost" (click)="clearForms()" style="width: 100px;">
+                        <button class="btn btn-update-ghost" [class.min-item]="isMobile" (click)="clearForms()" style="width: 100px;">
                             Limpiar
                         </button>
                     </li>
 
                     <li class="nav-item" [class.full-item]="!isMobile">
-                        <a class="btn btn-update-ghost" href="https://back-end-machin-learning.onrender.com/photos/export?skip=0&limit=10&all=true" target="_parent" style="width: 100px;">
+                        <a class="btn btn-update-ghost" [class.min-item]="isMobile" href="https://back-end-machin-learning.onrender.com/photos/export?skip=0&limit=10&all=true" target="_parent" style="width: 150px;">
                             Descargar Datos
                         </a>
                     </li>
 
                 </ul>
                 <div class="d-flex">
-                    <button class="btn btn-update-ghost" (click)="changeMode()" style="width: 100px;"
+                    <button class="btn btn-update-ghost" [class.min-item]="isMobile" (click)="changeMode()" style="width: 100px;"
                         [title]="!all ? 'Ver Todos' : 'Paginado'" (click)="previousItem()">
                         {{!all ? 'Ver Todos' : 'Paginado'}}
                     </button>

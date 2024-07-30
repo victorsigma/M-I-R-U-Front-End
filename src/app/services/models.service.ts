@@ -13,6 +13,8 @@ export class ModelsService {
   private myApiUrl = 'models';
   private myApiUrlTrain = 'train_model';
   private myApiUrlTest = 'predict';
+  private myApiUrlTestColor = 'recommend_colors';
+  private myApiUrlTestAge = 'recommend_movie_content';
   private myApiUrlPhoto = 'photos';
   private model: string = '';
 
@@ -46,6 +48,23 @@ export class ModelsService {
 
     return this.http.post<Prediction>(`${this.myAppUrl}${this.myApiUrlTest}`, fd);
   }
+
+  public testModelColor(file: File): Observable<Prediction> {
+    const fd = new FormData()
+    fd.append('model_name', this.model);
+    fd.append('file', file);
+
+    return this.http.post<Prediction>(`${this.myAppUrl}${this.myApiUrlTestColor}`, fd);
+  }
+
+  public testModelAge(file: File): Observable<Prediction> {
+    const fd = new FormData()
+    fd.append('model_name', this.model);
+    fd.append('file', file);
+
+    return this.http.post<Prediction>(`${this.myAppUrl}${this.myApiUrlTestAge}`, fd);
+  }
+
 
   public sendPhoto(form: any, file: File): Observable<any> {
     const fd = new FormData()

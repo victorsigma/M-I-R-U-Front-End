@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row flex-nowrap">
-        <div *ngIf="showPanel" class="slider-flex-left slider-flex" [class.slider-min]="sliderLeftStyle">
+        <div *ngIf="showPanel && !isMobile" class="slider-flex-left slider-flex" [class.slider-min]="sliderLeftStyle">
             <div class="d-flex flex-column align-items-center align-items-sm-start text-white sticky-top">
                 <ul class="navbar-nav me-auto mb-lg-0 pt-2 align-items-center align-items-sm-start w-100" id="menu">
                     <div style="display: flex;" [class.slider-flex-buttom]="sliderLeftStyle" class="w-100">
@@ -70,10 +70,10 @@
             <div class="page">
                 <!-- Contenido principal de tu página, incluyendo el <router-outlet> -->
                 <router-outlet></router-outlet>
-                <app-terminal *ngIf="showPanel" [terminalMessage]="terminalMessage"></app-terminal>
+                <app-terminal #terminal *ngIf="showPanel" [terminalMessage]="terminalMessage"></app-terminal>
             </div>
         </div>
-        <div *ngIf="showPanel" class="slider-flex-right slider-flex" [class.slider-min]="sliderRightStyle">
+        <div *ngIf="showPanel && !isMobile" class="slider-flex-right slider-flex" [class.slider-min]="sliderRightStyle">
             <div class="d-flex flex-column align-items-center align-items-sm-end text-white sticky-top">
                 <ul class="navbar-nav me-auto mb-lg-0 pt-2 align-items-center align-items-sm-end w-100" id="menu">
                     <div style="display: flex; justify-content: flex-end;" [class.slider-flex-buttom]="sliderRightStyle"

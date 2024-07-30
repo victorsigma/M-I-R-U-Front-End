@@ -46,3 +46,8 @@
 .full-item {
     margin-left: 20px;
 }
+
+.min-item {
+    padding-left: 0px !important;
+    text-align: left;
+}
