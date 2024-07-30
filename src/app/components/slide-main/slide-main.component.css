@@ -1,0 +1,146 @@
+.navbar {
+    min-height: 58px !important;
+}
+
+.navbar-header {
+    padding-inline: 17px !important;
+}
+
+.btn-toggler {
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: var(--bs-navbar-toggler-font-size);
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: -255px;
+    margin-top: var(--bs-dropdown-spacer);
+    background-color: var(--modal-color) !important;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.dropdown-menu {
+    background-color: var(--modal-color) !important;
+}
+
+.dropdown-menu-search {
+    border-top-left-radius: 0% !important;
+    border-top-right-radius: 0% !important;
+}
+
+.dropdown {
+    list-style-type: none
+}
+
+.m-title {
+    margin-right: 0px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--backgroud-color);
+    color: var(--menu-text-color);
+    user-select: none;
+}
+
+.nav-link span {
+    user-select: none;
+}
+
+.nav-link {
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.model-name {
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 74px !important;
+}
+
+span {
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.offcanvas {
+    background-color: var(--backgroud-color);
+    max-width: 240px;
+}
+
+
+.slider-flex-buttom {
+    display: flex;
+    justify-content: space-evenly !important;
+}
+
+.slider-flex-left {
+    border-right: 1px solid var(--text-color);
+
+    max-width: 340px;
+}
+
+.slider-flex-right {
+    border-left: 1px solid var(--text-color);
+    
+    max-width: 240px;
+}
+
+.slider-flex {
+    transition: max-width 0.2s ease-in-out, padding-inline 0.2s ease-in-out;
+    min-height: calc(100vh - 0.5px);
+}
+
+.slider-min {
+    transition: max-width 0.3s ease-in-out, padding-inline 0.3s ease-in-out;
+    max-width: 114px;
+    padding-inline: 3px;
+}
+
+.offcanvas-header {
+    justify-content: flex-start;
+    padding: 7px;
+    padding-left: 10px;
+    font-size: larger;
+}
+
+.offcanvas-body {
+    padding: 12px;
+}
+
+.offcanvas-title {
+    cursor: pointer;
+}
+
+.navbar-brand {
+    margin-inline: 10px;
+    cursor: pointer;
+}
+
+.min-vh-90 {
+    min-height: calc(100vh);
+}
+
+.page {
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.select-version {
+    display: flex;
+    justify-content: center;
+}
+
+.select-version h3 {
+    color: var(--text-color);
+}
+
+.select-version h6 {
+    color: var(--text-color);
+}

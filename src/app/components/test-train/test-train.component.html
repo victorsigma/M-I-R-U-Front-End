@@ -1,0 +1,17 @@
+<div class="container-fluid col-12" style="text-align: center; padding-top: 10%; padding-inline: 10%;">
+    <select class="select" style="margin-bottom: 10px;">
+        <option value="all">Predicción General</option>
+        <option value="only_age">Filtrado de Contenido</option>
+        <option value="only_color">Recomendación de Ropa</option>
+    </select>
+    <button dropZoneImg (changeIconDrop)="changeIconDrop($event)" class="bg-btn" (click)="photo.click()">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        <div>
+            <h1 class="btn-h1">Subir Foto</h1>
+        </div>
+    </button>
+</div>
+
+<input hidden #photo type="file" accept=".jpeg,.jpg,.png,.jfif" (change)="readPhoto($event)">
+
+<app-load-screen *ngIf="isTest" title="Obteniendo predicción" subtitle="No recargue o cierre la pagina"></app-load-screen>

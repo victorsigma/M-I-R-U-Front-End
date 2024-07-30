@@ -1,0 +1,8 @@
+.form-train {
+    border: 3px solid var(--text-color);
+    background-color: var(--background-color);
+    padding: 30px;
+    margin-inline: 20%;
+    padding-block: 50px;
+    border-radius: 10px;
+}

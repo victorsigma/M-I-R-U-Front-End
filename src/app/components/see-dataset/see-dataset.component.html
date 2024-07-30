@@ -1,0 +1,85 @@
+<div class="data-set col-12">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <p class="navbar-brand" href="#"></p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <input type="text" placeholder="Nombre" [(ngModel)]="searchTerm" class="text mb-3">
+                    </li>
+                    <li class="nav-item" [class.full-item]="!isMobile">
+                        <select class="select" [(ngModel)]="gender">
+                            <option value="">Genero</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </li>
+                    <li class="nav-item" [class.full-item]="!isMobile">
+                        <select class="select" [(ngModel)]="age">
+                            <option value="">Edad</option>
+                            <option value="infante">Infante</option>
+                            <option value="adolecente">Adolecente</option>
+                            <option value="adulto joven">Adulto joven</option>
+                            <option value="adulto">Adulto</option>
+                            <option value="adulto mayor">Adulto mayor</option>
+                        </select>
+                    </li>
+
+                    <li class="nav-item" [class.full-item]="!isMobile">
+                        <button class="btn btn-update-ghost" (click)="clearForms()" style="width: 100px;">
+                            Limpiar
+                        </button>
+                    </li>
+
+                    <li class="nav-item" [class.full-item]="!isMobile">
+                        <a class="btn btn-update-ghost" href="https://back-end-machin-learning.onrender.com/photos/export?skip=0&limit=10&all=true" target="_parent" style="width: 100px;">
+                            Descargar Datos
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-update-ghost" (click)="changeMode()" style="width: 100px;"
+                        [title]="!all ? 'Ver Todos' : 'Paginado'" (click)="previousItem()">
+                        {{!all ? 'Ver Todos' : 'Paginado'}}
+                    </button>
+                    <button class="btn btn-update-ghost" style="width: 100px;" title="<" (click)="previousItem()"
+                        [disabled]="all || searchTerm != '' || age != '' || gender != ''">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="btn btn-update-ghost" style="width: 100px;" title=">" (click)="nextItem()"
+                        [disabled]="all || searchTerm != '' || age != '' || gender != ''">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+    <div class="container-fluid dc-flex">
+        <div class="nav-item-offcanvas w-100" *ngIf="!filteredPhotos.length" style="display: flex; justify-content: space-around; margin-block: 10px;">
+            <img style="width: 200px;" src="https://media.tenor.com/Ip3LYNcDTu0AAAAi/valorant-omen.gif"
+                alt="error-animation">
+        </div>
+        <div *ngFor="let item of filteredPhotos" class="card-aling-p card-center">
+            <div class="card card-p" style="width: 18rem;">
+                <img [src]="item.foto_url" class="card-img-top" [alt]="item.nombre.substring(0,1).toLocaleLowerCase()+''+item.sexo.toLocaleLowerCase()+''+item.edad.slice(2)">
+                <div class="card-body">
+                    <p class="card-text">
+                        Nombre: {{item.nombre}},
+                        Edad: {{item.edad}},
+                        Sexo: {{item.sexo}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

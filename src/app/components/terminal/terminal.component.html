@@ -1,0 +1,11 @@
+<div class="terminal" #terminal [class.terminal-min]="isHidden">
+    <div style="margin-left: 5px;">
+        <button class="btn btn-hidden" (click)="hiddenTerminal()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+    <div class="resizer" #resizer [class.resizer-min]="isHidden"></div>
+    <div class="content w-100 h-100">
+        <pre [innerHTML]="terminalMessage"></pre>
+    </div>
+</div>

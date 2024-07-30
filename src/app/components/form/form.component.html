@@ -1,0 +1,79 @@
+<div *ngIf="page == 'form'" class="form">
+    <form [formGroup]="form" (submit)="nextForm()">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input class="text" type="text" id="nombre" name="nombre" formControlName="name" placeholder="Nombre" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="sexo">Sexo</label>
+            <select id="sexo" class="select" formControlName="gender" name="sexo" required>
+                <option value="M" selected>Masculino</option>
+                <option value="F">Femenino</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="edad">Edad</label>
+            <select id="edad" class="select" formControlName="age" name="edad" required>
+                <option value="infante" selected>Infante</option>
+                <option value="adulto_joven">Adulto Joven</option>
+                <option value="adulto">Adulto</option>
+                <option value="adulto_mayor">Adulto Mayor</option>
+                <option value="adolescente">Adolescente</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="color_piel">Color de Piel</label>
+            <select id="color_piel" class="select" formControlName="color" name="color_piel" required>
+                <option value="blanco" selected>Blanco</option>
+                <option value="moreno">Moreno</option>
+                <option value="negro">Negro</option>
+            </select>
+        </div>
+        <button class="btn btn-bg btn-update" [disabled]="form.invalid" type="submit">Siguiente</button>
+    </form>
+</div>
+
+<div *ngIf="page == 'image'" class="form">
+    <form>
+        <div class="form-group">
+            <label for="imagen">Fotografía</label>
+            <button dropZoneImg (changeIconDrop)="changeIconDrop($event)" type="button" class="bg-btn" (click)="triggerFileInput()">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <div>
+                    <h1 class="btn-h1">Subir Foto</h1>
+                </div>
+            </button>
+            <input hidden type="file" id="imagen" name="imagen" #photo (change)="onFileChange($event)" accept="image/*">
+        </div>
+        
+        <button class="btn btn-bg btn-update" [disabled]="file == undefined" type="button" (click)="sendForm()">Enviar</button>
+    </form>
+</div>
+
+<div *ngIf="page == 'thanks'" class="form">
+    <div>
+        <h1 class="gold">
+            ¡¡Gracias por participar!!
+        </h1>
+        <div class="nav-item-offcanvas w-100" style="display: flex; justify-content: space-around; margin-block: 10px;">
+            <img style="width: 200px;" src="https://media.tenor.com/Ip3LYNcDTu0AAAAi/valorant-omen.gif"
+                alt="error-animation">
+        </div>
+    </div>
+</div>
+
+<div *ngIf="page == 'error'" class="form">
+    <div>
+        <h1 class="red">
+            ¡¡Error al conectar con el servidor!!
+        </h1>
+        <div class="nav-item-offcanvas w-100" style="display: flex; justify-content: space-around; margin-block: 10px;">
+            <img style="width: 200px;" src="https://media.tenor.com/Ip3LYNcDTu0AAAAi/valorant-omen.gif"
+                alt="error-animation">
+        </div>
+    </div>
+</div>
+<app-load-screen *ngIf="isLoading" title="Obteniendo conexión" subtitle="No recargue o cierre la pagina"></app-load-screen>

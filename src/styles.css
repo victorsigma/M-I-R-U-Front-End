@@ -1,1 +1,1082 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #f1c0ff;
+    --secondary-color: #6347ee;
+    --success-color: #6b61ff;
+    --danger-color: #aa5454;
+    --warning-color: #e0ae50;
+    --options-color: #4930cd;
+    --more-color: #b080ff;
+    --info-color: #d2a0ff;
+    --light-color: #f8f9fa;
+    --dark-color: #1a1a1a;
+    --modal-color: #272727;
+
+    --backgroud-color: #1a1a1a;
+    --auto-fill-color: #202124;
+    --menu-text-color: #dee2e6;
+    --text-color: #ffffff;
+}
+
+
+[data-bs-theme="light"] {
+    --primary-color: #c69aff;
+    --secondary-color: #8e88ff;
+    --success-color: #6a82ff;
+    --danger-color: #ff005e;
+    --warning-color: #ff8c42;
+    --options-color: #4f40ff;
+    --more-color: #007bff;
+    --info-color: #56b8ff;
+    --light-color: #b4c7da;
+    --dark-color: #495057;
+    --modal-color: #e9ecef;
+
+    --backgroud-color: #f8f9fa;
+    --auto-fill-color: #e2e2e2;
+    --menu-text-color: #424242;
+    --text-color: #000000;
+}
+
+[data-bs-theme="tropical"] {
+    --primary-color: #ffca7a; /* Melocotón pastel */
+    --secondary-color: #AED581; /* Verde menta pastel */
+    --success-color: #426a8b; /* Rosa pastel */
+    --danger-color: #AFEEEE; /* Azul claro pastel */
+    --warning-color: #ffd900; /* Amarillo pastel */
+    --options-color: #8cccce; /* Rosa claro pastel */
+    --more-color: #fce1b9; /* Verde claro pastel */
+    --info-color: #ADD8E6; /* Azul cielo pastel */
+    --light-color: #F5F5F5; /* Blanco suave */
+    --dark-color: #696969; /* Gris oscuro */
+    --modal-color: #f5e5cf; /* Gris claro para modales */
+
+    --backgroud-color: #fff4e5; /* Melocotón claro pastel */
+    --auto-fill-color: #fffdf2; /* Amarillo claro pastel */
+    --menu-text-color: #5c5c5c; /* Blanco */
+    --text-color: #000000; /* Negro */
+}
+
+[data-bs-theme="playful"] {
+    --primary-color: #ff96c5; /* Rosa claro */
+    --secondary-color: #ffeba7; /* Amarillo pastel */
+    --success-color: #8be9fd; /* Azul claro */
+    --danger-color: #ff66ac; /* Rosa pastel */
+    --warning-color: #ffb86c; /* Naranja claro */
+    --options-color: #a4d6e6; /* Azul cielo */
+    --more-color: #ffcc5c; /* Amarillo claro */
+    --info-color: #9bf6ff; /* Turquesa claro */
+    --light-color: #f5f5f5; /* Blanco suave */
+    --dark-color: #555555; /* Gris oscuro */
+    --modal-color: #ecd4e3; /* Gris claro para modales */
+
+    --backgroud-color: #ffe6f0; /* Rosa claro */
+    --auto-fill-color: #ffd3e5; /* Amarillo claro */
+    --menu-text-color: #4d4d4d; /* Gris oscuro */
+    --text-color: #000000; /* Negro */
+}
+
+[data-bs-theme="oceanic"] {
+    --primary-color: #82caff; /* Azul cielo */
+    --secondary-color: #a6e3e9; /* Azul claro */
+    --success-color: #00adb5; /* Azul verdoso */
+    --danger-color: #ff4f52; /* Rojo coral */
+    --warning-color: #f9c22e; /* Amarillo dorado */
+    --options-color: #e3fdfd; /* Azul cielo claro */
+    --more-color: #6f9fd8; /* Azul marino */
+    --info-color: #b4f1f1; /* Turquesa claro */
+    --light-color: #f5f5f5; /* Blanco suave */
+    --dark-color: #555555; /* Gris oscuro */
+    --modal-color: #a0cbd6; /* Gris claro para modales */
+
+    --backgroud-color: #cfeef7; /* Azul claro */
+    --auto-fill-color: #a9e4f5; /* Azul cielo claro */
+    --menu-text-color: #333333; /* Gris oscuro */
+    --text-color: #000000; /* Negro */
+}
+
+[data-bs-theme="sunset"] {
+    --primary-color: #f47f63; /* Rosa salmón */
+    --secondary-color: #f7a072; /* Naranja pastel */
+    --success-color: #6c7cd8; /* Amarillo melocotón */
+    --danger-color: #f691a3; /* Rosa suave */
+    --warning-color: #f5d9a7; /* Amarillo suave */
+    --options-color: #9db4ff; /* Azul pálido */
+    --more-color: #8ab6d6; /* Azul claro */
+    --info-color: #b7d2e9; /* Azul cielo claro */
+    --light-color: #f5f5f5; /* Blanco suave */
+    --dark-color: #555555; /* Gris oscuro */
+    --modal-color: #ffcfe5; /* Gris claro para modales */
+
+    --backgroud-color: #ffe2e6; /* Rosa claro */
+    --auto-fill-color: #e9cace; /* Amarillo claro */
+    --menu-text-color: #333333; /* Gris oscuro */
+    --text-color: #000000; /* Negro */
+}
+
+[data-bs-theme="spring"] {
+    --primary-color: #9ad3bc; /* Verde menta */
+    --secondary-color: #f3c3ba; /* Rosa melocotón */
+    --success-color: #769992; /* Azul claro */
+    --danger-color: #f9ebae; /* Amarillo pálido */
+    --warning-color: #f4acb7; /* Rosa claro */
+    --options-color: #a6dcef; /* Azul cielo */
+    --more-color: #7fb4ab; /* Blanco hueso */
+    --info-color: #c0c9ff; /* Azul lavanda */
+    --light-color: #f5f5f5; /* Blanco suave */
+    --dark-color: #555555; /* Gris oscuro */
+    --modal-color: #e1f1f1; /* Gris claro para modales */
+
+    --backgroud-color: #e6f1e1; /* Verde claro */
+    --auto-fill-color: #ddf8d0; /* Naranja claro */
+    --menu-text-color: #333333; /* Gris oscuro */
+    --text-color: #000000; /* Negro */
+}
+
+
+.date::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23000000" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+    transition: all 0.3s ease 0s;
+}
+
+[data-bs-theme="default"] .date::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23ffffff" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+    transition: all 0.3s ease 0s;
+}
+
+.date:hover::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%238e88ff" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+.date:focus::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%238e88ff" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="default"] .date:hover::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%236347ee" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="default"] .date:focus::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%236347ee" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="tropical"] .date:hover::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23AED581" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="tropical"] .date:focus::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23AED581" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="playful"] .date:hover::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23ffeba7" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="playful"] .date:focus::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23ffeba7" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="oceanic"] .date:hover::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23a6e3e9" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="oceanic"] .date:focus::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23a6e3e9" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="sunset"] .date:hover::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23f7a072" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="sunset"] .date:focus::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23f7a072" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="spring"] .date:hover::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23f3c3ba" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+[data-bs-theme="spring"] .date:focus::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23f3c3ba" d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>');
+}
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(67, 67, 68);
+}
+
+span {
+    color: var(--text-color);
+    font-size: x-large;
+}
+
+body {
+    background-color: var(--backgroud-color);
+}
+
+.modal-content {
+    background-color: var(--modal-color);
+    color: var(--text-color);
+    border: none var(--text-color) 1px;
+}
+
+.btn {
+    color: var(--text-color);
+}
+
+.card-title, .card-text, .text-subtitle {
+    color: var(--text-color) !important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: var(--text-color);
+}
+
+.mpm-logo {
+    cursor: pointer;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+    color: var(--text-color);
+}
+
+[data-bs-theme="default"] .btn-close {
+    filter: var(--bs-btn-close-white-filter);
+}
+
+.options {
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 992px) {
+
+    .navbar-title {
+        width: 100% !important;
+        text-align: center;
+        padding-bottom: 0px !important;
+        margin-right: 0px !important;
+        font-size: 1.2rem !important;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .button-options {
+        padding-block: 4px !important;
+        padding-inline: 0px !important;
+        letter-spacing: normal !important;
+        color: var(--text-color);
+        background-color: transparent;
+        border: none !important;
+        border-radius: 0px !important;
+        box-shadow: none !important;
+        cursor: pointer;
+        margin-right: 0px !important;
+        text-align: left !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .button-options:hover {
+        color: var(--primary-color) !important;
+    }
+}
+
+.text {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: transparent;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+    cursor: text;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: var(--text-color) solid 2px;
+}
+
+.text[type="password"] {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: transparent;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+    cursor: text;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: var(--text-color) solid 2px;
+}
+
+.text:focus {
+    border-bottom: var(--secondary-color) solid 2px;
+}
+
+.text:hover {
+    border-bottom: var(--secondary-color) solid 2px;
+}
+
+
+
+.text:-webkit-autofill,
+.text:-webkit-autofill:hover,
+.text:-webkit-autofill:focus,
+.text:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 50px var(--auto-fill-color) inset;
+    -webkit-text-fill-color: var(--text-color);
+}
+
+.text:disabled {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: transparent;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+    cursor: default;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: var(--secondary-color) solid 2px;
+}
+
+.text:disabled::after {
+    border-bottom: rgb(74, 206, 140) solid 2px;
+    color: var(--text-color);
+}
+
+
+.textarea {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: transparent;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+    cursor: text;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border: var(--text-color) solid 2px;
+    min-height: 50px;
+}
+
+.textarea:hover {
+    color: var(--text-color);
+    border: var(--secondary-color) solid 2px;
+    transition: border 0.2s linear;
+}
+
+.textarea:focus {
+    border: var(--secondary-color) solid 2px;
+    color: var(--text-color);
+}
+
+.textarea:-webkit-autofill,
+.textarea:-webkit-autofill:hover,
+.textarea:-webkit-autofill:focus,
+.textarea:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 50px var(--auto-fill-color) inset;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+
+.select {
+    display: block;
+    width: 100%;
+    min-height: 38px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: var(--text-color) solid 2px;
+    background-color: transparent;
+}
+
+option {
+    background-color: var(--modal-color) !important;
+    cursor: pointer;
+}
+
+.select::after {
+    border-bottom: var(--secondary-color) solid 2px;
+    color: var(--text-color);
+}
+
+.select:focus {
+    border-bottom: var(--secondary-color) solid 2px;
+    outline: none;
+}
+
+.select:hover {
+    border-bottom: var(--secondary-color) solid 2px;
+}
+
+/* Remove these lines if not needed */
+
+
+
+.date {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: transparent;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+    cursor: text;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: var(--text-color) solid 2px;
+}
+
+.error {
+    color: rgb(255, 99, 99) !important;
+}
+
+
+.date::after {
+    border-bottom: var(--secondary-color) solid 2px;
+    color: var(--text-color);
+}
+
+.date:focus {
+    border-bottom: var(--secondary-color) solid 2px;
+}
+
+.date:hover {
+    border-bottom: var(--secondary-color) solid 2px;
+}
+
+.btn-close-color {
+    color: var(--text-color);
+    border: 3px solid transparent;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-close-color:focus {
+    color: var(--text-color);
+    border: 3px solid #1a1a1aa8;
+}
+
+.btn-update:enabled:hover {
+    color: var(--text-color);
+    border: solid var(--more-color) 2px;
+}
+
+.btn-update:enabled:focus {
+    border: solid var(--more-color) 2px !important;
+}
+
+.btn-update:enabled {
+    color: var(--text-color);
+    border: solid var(--primary-color) 2px;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-update:disabled {
+    color: var(--text-color);
+    border: solid var(--modal-color) 2px;
+    transition: all 0.3s ease 0s;
+}
+
+
+
+.btn-delete:hover {
+    border: solid var(--warning-color) 2px;
+}
+
+.btn-delete:focus {
+    border: solid var(--warning-color) 2px !important;
+}
+
+.btn-delete {
+    color: var(--text-color);
+    border: solid var(--danger-color) 2px;
+    transition: all 0.3s ease 0s;
+}
+
+
+.btn-item:hover {
+    border: solid var(--more-color) 2px;
+}
+
+.btn-item:focus {
+    border: solid var(--more-color) 2px !important;
+}
+
+.btn-item {
+    color: var(--text-color);
+    border: solid var(--primary-color) 2px;
+    padding: 0.7em 3em;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-item-ghost {
+    color: transparent;
+    border: solid transparent 2px;
+    padding: 0.7em 3em;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    cursor: default;
+}
+
+.button-options {
+    padding: 0.8em 2em;
+    letter-spacing: 2.5px;
+    color: var(--text-color);
+    background-color: transparent;
+    border: var(--options-color) 2px solid;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-right: 5px;
+}
+
+.button-options:hover {
+    border: var(--success-color) 2px solid;
+    color: var(--text-color);
+}
+
+.button-options:focus {
+    border: var(--success-color) 2px solid;
+}
+
+
+.btn-email-check {
+    background-color: var(--auto-fill-color); /* Cambia el color para que coincida con el tema */
+    color: var(--text-color); /* Color del texto */
+    border: solid var(--secondary-color) 2px !important;
+    border-radius: 0.375rem;
+    padding: 10px 20px; /* Ajusta el padding */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    background-size: 1500% 100%;
+    background-image: linear-gradient(to right, var(--auto-fill-color), var(--modal-color));
+    transition: all 0.3s ease 0s;
+}
+
+.btn-email-check:enabled:hover {
+    background-position: 100% 100%;
+    
+    background-color: var(--modal-color);
+}
+.btn-email-check:enabled:active {
+    background-color: var(--modal-color);
+    border: solid var(--modal-color) 2px !important;
+}
+
+.modal-header {
+    border-bottom: var(--bs-modal-header-border-width) solid var(--text-color);
+}
+
+.border-bottom {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--text-color)!important;
+}
+
+.dropdown-menu-dark {
+    --bs-dropdown-color: var(--menu-text-color);
+}
+
+.dropdown-item {
+    color: var(--menu-text-color);
+}
+
+.navbar-brand {
+    color: var(--text-color);
+}
+
+.navbar-brand:hover {
+    color: var(--text-color);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: var(--text-color);
+}
+
+.nav-link {
+    position: relative; /* Necesario para alinear el pseudo-elemento */
+    color: var(--text-color);
+    text-decoration: none; /* Asegúrate de que los enlaces no tengan subrayado */
+    overflow: hidden; /* Oculta el exceso del pseudo-elemento */
+    border-radius: 0px !important;
+    transition: color 0.6s ease 0s;
+}
+
+.nav-link-icon {
+    position: relative; /* Necesario para alinear el pseudo-elemento */
+    color: var(--text-color);
+    text-decoration: none; /* Asegúrate de que los enlaces no tengan subrayado */
+    overflow: hidden; /* Oculta el exceso del pseudo-elemento */
+    border-radius: 0px !important;
+    transition: color 0.6s ease 0s;
+    padding: 8px 13px;
+}
+
+.nav-link-icon::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Inicialmente centrado en el elemento */
+    transform: translateX(-50%); /* Centra el pseudo-elemento horizontalmente */
+    width: 0;
+    height: 2px; /* Grosor del borde inferior */
+    background-color: var(--backgroud-color); /* Color inicial del borde */
+    transition: left 0s ease, width 0.6s ease; /* Transición solo para el ancho */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100%; /* Inicialmente fuera del elemento a la derecha */
+    width: 0;
+    height: 2px; /* Grosor del borde inferior */
+    background-color: var(--backgroud-color); /* Color inicial del borde */
+    transition: left 0s ease, width 0.6s ease; /* Transición solo para el ancho */
+}
+
+
+.nav-pills .nav-activity.active,
+.nav-pills .show>.nav-activity {
+    transition: all 0.3s ease 0s;
+    color: var(--text-color);
+    background-color: transparent;
+    border: 2px var(--more-color) solid;
+    box-shadow: 0px 5px 20px var(--more-color);
+}
+
+.nav-pills .nav-activity {
+    background: 0 0;
+    border: 0;
+    border-radius: var(--bs-nav-pills-border-radius);
+    border: 2px var(--success-color) solid;
+}
+
+.nav-activity {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, transform 0.3s;
+    min-width: 117.91px;
+}
+
+.nav-activity:hover {
+    transform: translateY(-1px);
+    color: var(--text-color);
+}
+
+.nav-activity-margin {
+    margin-top: 20px;
+}
+
+.nav-ver-margin {
+    margin-left: 10px;
+}
+
+.btn-icon {
+    padding: 0px;
+    border-radius: 20px;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.btn-icon:disabled {
+    padding: 0px;
+    border-radius: 20px;
+    min-width: 40px;
+    min-height: 40px;
+    border: transparent;
+}
+
+.btn-icon img {
+    max-width: 40px;
+    border-radius: 20px;
+}
+
+.user-icon {
+    padding-block: 10px !important;
+    padding-inline: 15px !important;
+    margin: 0px;
+}
+
+.user-icon img {
+    max-width: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.btn-toggler {
+    min-height: 40px;
+    min-width: 40px;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-toggler:hover {
+    background-color: #50505057 !important;
+}
+
+
+.nav-item-offcanvas .nav-link {
+    padding-inline: 13px !important;
+    border-radius: 10px;
+    max-height: 40px;
+    text-align: left;
+    margin-block: 2px !important;
+}
+
+.nav-item-offcanvas-s .nav-link {
+    padding-inline: 2px !important;
+    text-align: center;
+}
+
+.nav-item-offcanvas .active {
+    background-color: var(--primary-color);
+    color: black !important;
+}
+
+.nav-item-offcanvas .nav-link:hover {
+    color: var(--success-color);
+}
+
+.nav-item-offcanvas .nav-link-icon:hover {
+    color: var(--success-color);
+}
+
+
+.nav-item-offcanvas .nav-link:hover::after {
+    left: 0; /* Mueve el borde desde la derecha hacia la izquierda */
+    width: 100%; /* Ancho completo al hacer hover */
+    background-color: var(--success-color); /* Nuevo color del borde */
+}
+
+.nav-item-offcanvas .nav-link-icon:hover::after {
+    right: 0; /* Mueve el borde desde la derecha hacia la izquierda */
+    width: 85%; /* Ancho completo al hacer hover */
+    background-color: var(--success-color); /* Nuevo color del borde */
+}
+
+.card-img-top {
+    max-width: 284px;
+    max-height: 284px;
+    
+    min-width: 284px;
+    min-height: 284px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción y recorta desde el centro */
+    object-position: center; /* Centra la imagen en el contenedor */
+}
+
+.card-img-top-terminal {
+    max-width: 84px;
+    max-height: 84px;
+    
+    min-width: 84px;
+    min-height: 84px;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover; /* Mantiene la proporción y recorta desde el centro */
+    object-position: center; /* Centra la imagen en el contenedor */
+}
+
+.dropdown-divider {
+    background-color: var(--text-color);
+    height: 1.5px !important;
+    width: 100%;
+    margin: 1px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.card-aling {
+    margin: 1em;
+    display: inline-block;
+}
+
+.card-aling-u {
+    margin: 1em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.card-aling-p {
+    margin: 1em;
+    display: inline-block;
+}
+
+.text-subtitle {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-u {
+    background-color: transparent;
+    border: transparent solid 2px;
+    width: 15rem;
+}
+
+.card-p {
+    background-color: transparent;
+    border: transparent solid 2px;
+    width: 23rem;
+}
+
+.card-p p {
+    font-size: small;
+    color: var(--text-color)7c;
+}
+
+.card-u p {
+    font-size: small;
+    color: var(--text-color)7c;
+}
+
+.card-p h5 {
+    font-size: larger;
+    color: var(--text-color);
+}
+
+.card-u h5 {
+    font-size: larger;
+    color: var(--text-color);
+}
+
+.card-p img {
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.card-u img {
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+}
+
+.card-aling-u .card-u:hover img {
+    transform: translateY(-4px);
+}
+
+
+.checkbox label {
+    margin-right: 10px;
+    margin-left: 7px;
+    user-select: none;
+    color: var(--text-color);
+}
+
+.checkbox input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: solid #353535 1px;
+    border-radius: 4px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkbox input[type="checkbox"]:checked {
+    background-color: var(--success-color);
+    border: 1px transparent solid;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23fff" height="6" width="4.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');
+}
+
+.checkbox input[type="checkbox"]:disabled:checked {
+    background-color: var(--options-color);
+    border: 1px #494949 solid;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23fff" height="6" width="4.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');
+}
+
+.checkbox input[type="checkbox"]:disabled {
+    background-color: var(--success-color);
+    border: 1px #494949 solid;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23fff" height="6" width="4.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');
+}
+
+.checkbox label {
+    transition: all 0.3s ease 0s;
+}
+
+.checkbox label:hover {
+    color: var(--primary-color);
+}
+
+.upper-firt::first-letter {
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 1202px) {
+    .card-p {
+        width: 22.5rem;
+    }
+}
+
+@media (max-width: 1066px) {
+    .card-p {
+        width: 21.5rem;
+    }
+}
+
+@media (max-width: 998px) {
+    .card-p {
+        width: 19.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .card-p {
+        width: 17.5rem;
+    }
+}
+
+@media (max-width: 955px) {
+    .card-p {
+        width: 16.5rem;
+    }
+}
+
+@media (max-width: 910px) {
+    .card-p {
+        width: 24.5rem;
+    }
+}
+
+@media (max-width: 871px) {
+    .card-p {
+        width: 23.5rem;
+    }
+}
+
+
+@media (max-width: 839px) {
+    .card-p {
+        width: 20.5rem;
+    }
+}
+
+
+@media (max-width: 759px) {
+    .card-p {
+        width: 18.5rem;
+    }
+}
+
+@media (max-width: 695px) {
+    .card-p {
+        width: 18rem;
+    }
+}
+
+@media (max-width: 679px) {
+    .card-p {
+        width: 17rem;
+    }
+}
+
+@media (max-width: 649px) {
+    .card-p {
+        width: 16rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-p {
+        width: 100%;
+    }
+}
+
+.black { color: #000000; }
+.dark_blue { color: #0000AA; }
+.dark_green { color: #00AA00; }
+.dark_aqua { color: #00AAAA; }
+.dark_red { color: #AA0000; }
+.dark_purple { color: #AA00AA; }
+.gold { color: #FFAA00; }
+.gray { color: #AAAAAA; }
+.dark_gray { color: #555555; }
+.blue { color: #5555FF; }
+.green { color: #55FF55; }
+.aqua { color: #55FFFF; }
+.red { color: #FF5555; }
+.light_purple { color: #FF55FF; }
+.yellow { color: #FFFF55; }
+.white { color: var(--text-color) }
+
+.obfuscated { /* Define CSS for obfuscated text, like background color changes or random text patterns */ }
+.bold { font-weight: bold; }
+.strikethrough { text-decoration: line-through; }
+.underline { text-decoration: underline; }
+.italic { font-style: italic; }

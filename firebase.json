@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "m-i-r-u",
+    "public": "dist/front-end-machin-learning",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

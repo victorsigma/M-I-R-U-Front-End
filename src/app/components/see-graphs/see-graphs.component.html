@@ -1,0 +1,11 @@
+
+
+<div class="container-fluid" style="padding: 100px;" #chartContainer>
+    <select class="select" style="margin-bottom: 10px;" [(ngModel)]="options" (change)="updateChartSize()">
+        <option value="Modelos">Puntuación de modelos por fecha</option>
+        <option value="Sexo">Generos en la Población</option>
+        <option value="Edad">Edades en la Población</option>
+        <option value="Color">Tonos de Piel en la Población</option>
+    </select>
+    <canvas id="ctx"></canvas>
+</div>

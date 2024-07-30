@@ -1,0 +1,82 @@
+.terminal {
+    position: fixed;
+    bottom: 0;
+    top: calc(70vh);
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    transition: height 0.6s;
+    
+    min-height: calc(100vh - 206px);
+    
+    transition: all 0s;
+}
+
+
+.terminal-min {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    transition: height 0.6s;
+
+    height: 36px !important;
+    
+    top: calc(96vh) !important;
+    transition: all 0.6s;
+}
+
+.resizer-min {
+    cursor: default !important;
+}
+
+.content {
+    border-top: 1px solid var(--text-color);
+    background-color: var(--backgroud-color) !important;
+    height: 300px;
+    padding: 10px;
+
+    overflow-y: auto;
+    /* Agrega un scrollbar vertical si el contenido es más largo que el contenedor */
+    overflow-x: auto;
+    /* Agrega un scrollbar horizontal si el contenido es más ancho que el contenedor */
+    height: calc(100vh - 46px); /* Ajuste para evitar solapamiento con el padding */
+}
+
+.resizer {
+    left: 250px; /* Ajusta según el ancho inicial de la barra lateral */
+    width: 100%; /* Ancho del área de redimensionamiento */
+    height: 2px;
+    cursor: s-resize; /* Cursor de redimensionamiento horizontal */
+    background-color: #ccc;
+    z-index: 10; /* Asegura que el resizer esté sobre la barra lateral */
+}
+
+.btn-hidden {
+    min-width: 30px;
+    width: 60px;
+    border-top: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 0px;
+    background-color: var(--backgroud-color) !important;
+    transition: color 0.6s;
+}
+
+.btn-hidden:hover {
+    color: var(--secondary-color);
+}
+
+.btn-hidden:active {
+    border-top: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 0px;
+}

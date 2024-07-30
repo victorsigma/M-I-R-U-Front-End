@@ -1,0 +1,150 @@
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div *ngIf="showPanel" class="slider-flex-left slider-flex" [class.slider-min]="sliderLeftStyle">
+            <div class="d-flex flex-column align-items-center align-items-sm-start text-white sticky-top">
+                <ul class="navbar-nav me-auto mb-lg-0 pt-2 align-items-center align-items-sm-start w-100" id="menu">
+                    <div style="display: flex;" [class.slider-flex-buttom]="sliderLeftStyle" class="w-100">
+                        <button class="btn-toggler" type="button" aria-label="Toggle navigation"
+                            [attr.data-bs-toggle]="isMobile ? 'offcanvas' : null" data-bs-target="#offcanvasExample"
+                            (click)="sliderLeftChange()">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+
+                    <div class="select-version w-100">
+                        <h3 *ngIf="!sliderLeftStyle">
+                            Lista de Modelos
+                        </h3>
+                    </div>
+
+                    <div class="select-version w-100">
+                        <h3 *ngIf="!sliderLeftStyle">
+                            {{model}}
+                        </h3>
+
+                        <h6 *ngIf="sliderLeftStyle">
+                            {{model}}
+                        </h6>
+                    </div>
+
+                    <li class="nav-item-offcanvas w-100" [class.nav-item-offcanvas-s]="sliderLeftStyle">
+                        <hr class="dropdown-divider">
+                    </li>
+                    <div *ngIf="!modelsList.length && !sliderLeftStyle" class="nav-item-offcanvas w-100"
+                        style="display: flex; justify-content: space-around; margin-block: 10px;">
+                        <img style="width: 200px;" src="https://media.tenor.com/Ip3LYNcDTu0AAAAi/valorant-omen.gif"
+                            alt="error-animation">
+                    </div>
+                    <div *ngIf="!modelsList.length && sliderLeftStyle" class="nav-item-offcanvas w-100"
+                        style="display: flex; justify-content: space-around; margin-block: 10px;">
+                        <img style="width: 100px;" src="https://media.tenor.com/Ip3LYNcDTu0AAAAi/valorant-omen.gif"
+                            alt="error-animation">
+                    </div>
+                    <div *ngFor="let item of modelsList" class="nav-item-offcanvas w-100"
+                        style="display: flex; justify-content: space-around; margin-block: 10px;"
+                        [class.nav-item-offcanvas-s]="sliderLeftStyle">
+                        <span class="ms-1 d-none d-sm-inline model-name" style="align-content: space-around;"
+                            *ngIf="!sliderLeftStyle">
+                            {{item.model_name}}
+                        </span>
+                        <button class="btn btn-update" (click)="selectModel(item.model_name)"
+                            title="{{item.model_name}}">
+                            Selecionar
+                        </button>
+                    </div>
+
+                    <div class="nav-item-offcanvas w-100"
+                        style="display: flex; justify-content: space-around; margin-block: 10px;"
+                        [class.nav-item-offcanvas-s]="sliderLeftStyle">
+                        <button class="btn btn-update" title="<" (click)="previousItem()">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button class="btn btn-update" title=">" (click)="nextItem()">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="col" style="padding-left: 0px !important; padding-right: 0px;">
+            <div class="page">
+                <!-- Contenido principal de tu página, incluyendo el <router-outlet> -->
+                <router-outlet></router-outlet>
+                <app-terminal *ngIf="showPanel" [terminalMessage]="terminalMessage"></app-terminal>
+            </div>
+        </div>
+        <div *ngIf="showPanel" class="slider-flex-right slider-flex" [class.slider-min]="sliderRightStyle">
+            <div class="d-flex flex-column align-items-center align-items-sm-end text-white sticky-top">
+                <ul class="navbar-nav me-auto mb-lg-0 pt-2 align-items-center align-items-sm-end w-100" id="menu">
+                    <div style="display: flex; justify-content: flex-end;" [class.slider-flex-buttom]="sliderRightStyle"
+                        class="w-100">
+                        <button class="btn-toggler" type="button" aria-label="Toggle navigation"
+                            [attr.data-bs-toggle]="isMobile ? 'offcanvas' : null" data-bs-target="#offcanvasExample"
+                            (click)="sliderRightChange()">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+
+                    <li class="nav-item-offcanvas w-100" style="margin-top: 40px;">
+                        <a *ngIf="!sliderRightStyle" class="nav-link" routerLink="/test-model">
+                            Probar Modelo
+                        </a>
+                        <a *ngIf="sliderRightStyle" class="nav-link-icon slider-flex-buttom" routerLink="/test-model">
+                            <i class="fa-solid fa-microscope"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item-offcanvas w-100" style="margin-top: 10px;">
+                        <a *ngIf="!sliderRightStyle" class="nav-link" routerLink="/train-model">
+                            Entrenar Modelo
+                        </a>
+                        <a *ngIf="sliderRightStyle" class="nav-link-icon slider-flex-buttom" routerLink="/train-model">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item-offcanvas w-100" style="margin-top: 10px;">
+                        <a *ngIf="!sliderRightStyle" class="nav-link" routerLink="/see-dataset">
+                            Ver DataSet
+                        </a>
+                        <a *ngIf="sliderRightStyle" class="nav-link-icon slider-flex-buttom" routerLink="/see-dataset">
+                            <i class="fa-solid fa-database"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item-offcanvas w-100" style="margin-top: 10px;">
+                        <a *ngIf="!sliderRightStyle" class="nav-link" routerLink="/see-graphs">
+                            Ver Grafica
+                        </a>
+                        <a *ngIf="sliderRightStyle" class="nav-link-icon slider-flex-buttom" routerLink="/see-graphs">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <button class="btn-toggler" type="button" aria-label="Toggle navigation" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- <img class="offcanvas-title" id="offcanvasExampleLabel" [src]="this.appIcon" alt="mpm-logo" routerLink=""
+            style="max-height: 40px;"> -->
+    </div>
+    <div class="offcanvas-body">
+        <div id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex">
+                <li class="nav-item-offcanvas">
+                    <a class="nav-link" aria-current="page" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}" routerLink="register"><i
+                            class="fa-solid fa-user-plus fa-sm"></i>&nbsp;&nbsp;Modelo 1</a>
+                </li>
+                <li class="nav-item-offcanvas">
+                    <hr class="dropdown-divider">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

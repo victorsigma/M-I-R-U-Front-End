@@ -1,0 +1,5 @@
+.chart {
+    overflow-y: auto;
+    /* Agrega un scrollbar vertical si el contenido es más largo que el contenedor */
+    overflow-x: auto;
+}
