@@ -3,3 +3,19 @@
     /* Agrega un scrollbar vertical si el contenido es más largo que el contenedor */
     overflow-x: auto;
 }
+
+.btn-update-ghost {
+    border: transparent !important;
+}
+
+.btn-update-ghost i {
+    transition: all 0.4s ease;
+}
+
+.btn-update-ghost:hover i {
+    color: var(--primary-color);
+}
+
+.btn-update-ghost:hover {
+    color: var(--primary-color);
+}

@@ -7,5 +7,6 @@
         <option value="Edad">Edades en la Población</option>
         <option value="Color">Tonos de Piel en la Población</option>
     </select>
-    <canvas id="ctx"></canvas>
+    <canvas #chartCanvas id="ctx"></canvas>
+    <button (click)="downloadChartAsPDF()" class="btn btn-update-ghost">Descargar PDF</button>
 </div>

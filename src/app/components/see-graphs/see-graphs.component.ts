@@ -3,7 +3,8 @@ import { CategoryScale, Chart, LinearScale, LineElement, PointElement, LineContr
 import { Age, Sexo, Stadistic } from 'src/app/models/graph';
 import { ModelsService } from 'src/app/services/models.service';
 import { ColorSk } from '../../models/graph';
-
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas-pro';
 Chart.register(LineController, LineElement, PointElement, CategoryScale, LinearScale, BarController, BarElement); // Register all necessary components
 
 @Component({
@@ -13,6 +14,7 @@ Chart.register(LineController, LineElement, PointElement, CategoryScale, LinearS
 })
 export class SeeGraphsComponent implements OnInit {
   @ViewChild('chartContainer', { static: true }) chartContainer!: ElementRef;
+  @ViewChild('chartCanvas', { static: true }) chartCanvas!: ElementRef<HTMLCanvasElement>;
 
   chart: Chart | undefined; // Changed to Chart type
   lineSeries: any;
@@ -257,5 +259,20 @@ export class SeeGraphsComponent implements OnInit {
         }
       });
     }
+  }
+
+  downloadChartAsPDF(): void {
+    const canvas = this.chartCanvas.nativeElement;
+    html2canvas(canvas, { useCORS: true, backgroundColor: null }).then(canvas => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('landscape');
+      const imgWidth = pdf.internal.pageSize.getWidth();
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+      pdf.save('chart.pdf');
+    }).catch(error => {
+      console.error('Error generating PDF:', error);
+    });
   }
 }
