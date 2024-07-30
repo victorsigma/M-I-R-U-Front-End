@@ -17,9 +17,9 @@
             <label for="edad">Edad</label>
             <select id="edad" class="select" formControlName="age" name="edad" required>
                 <option value="infante" selected>Infante</option>
-                <option value="adulto_joven">Adulto Joven</option>
+                <option value="adulto joven">Adulto Joven</option>
                 <option value="adulto">Adulto</option>
-                <option value="adulto_mayor">Adulto Mayor</option>
+                <option value="adulto mayor">Adulto Mayor</option>
                 <option value="adolescente">Adolescente</option>
             </select>
         </div>
@@ -68,7 +68,7 @@
 <div *ngIf="page == 'error'" class="form">
     <div>
         <h1 class="red">
-            ¡¡Error al conectar con el servidor!!
+            <p>{{ errorMessage }}</p>
         </h1>
         <div class="nav-item-offcanvas w-100" style="display: flex; justify-content: space-around; margin-block: 10px;">
             <img style="width: 200px;" src="https://media.tenor.com/Ip3LYNcDTu0AAAAi/valorant-omen.gif"

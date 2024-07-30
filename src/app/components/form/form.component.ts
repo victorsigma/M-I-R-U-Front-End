@@ -20,7 +20,7 @@ export class FormComponent {
   public page: 'form' | 'image' | 'thanks' | 'error' = 'form';
   
   public isLoading: boolean = true;
-
+  errorMessage: string = '';
 
   constructor(private modelsService: ModelsService) { 
     this.modelsService.powerOnServer().subscribe({
@@ -45,6 +45,7 @@ export class FormComponent {
       complete: () => { },
       error: (error) => {
         console.log(error)
+        this.errorMessage = error?.error.detail || 'An unexpected error occurred. Please try again.';
         this.page = 'error';
       }
     })
